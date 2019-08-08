@@ -8,14 +8,14 @@ tags: []
 type: "blog"
 showonlyimage: false
 weight: 1
-image: "img/china.pdf"
+image: "img/china.png"
 description: "We ran four list experiments in China to evaluate self-censorship on items commonly used in comparative politics to measure regime support."
 output:
   blogdown::html_page:
     toc: false
 ---
 
-Together with [Darrel Robinson](http://www.darrelrobinson.com/) we ran four list experiments in mainland China in 2017 in order to evaluate self-censorship on items commonly used in comparative politics to measure regime support. In short there is quite a lot of self-censorship going on, which help explain the comparatively high levels of reported regime support in China. The paper is published in [*Research & Politics*](https://journals.sagepub.com/doi/full/10.1177/2053168019856449).
+Together with [Darrel Robinson](http://www.darrelrobinson.com/) we ran four list experiments in mainland China in 2017 in order to evaluate self-censorship on items commonly used in comparative politics to measure regime support. In short there is quite a lot of self-censorship going on, which help explain the comparatively high levels of reported regime support in China. The paper is published in [*Research & Politics*](https://journals.sagepub.com/doi/full/10.1177/2053168019856449)
 .
 
 #### Abstract
@@ -24,6 +24,6 @@ The study of popular support for authoritarian regimes has long relied on the as
 
 #### Figures
 
-![Direct and indirect meassures of regime support in China (figure 2 in paper)](/img/china.pdf)
+![Direct and indirect meassures of regime support in China (figure 2 in paper)](/img/china.png)
 
-![Self-censorship by subgroup](/img/china-subgroup.pdf)
+![Self-censorship by subgroup](/img/china-subgroup.png)
