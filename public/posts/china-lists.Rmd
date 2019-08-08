@@ -15,8 +15,7 @@ output:
     toc: false
 ---
 
-Together with [Darrel Robinson](http://www.darrelrobinson.com/) we ran four list experiments in mainland China in 2017 in order to evaluate self-censorship on items commonly used in comparative politics to measure regime support. In short there is quite a lot of self-censorship going on, which help explain the comparatively high levels of reported regime support in China. The paper is published in [*Research & Politics*](https://journals.sagepub.com/doi/full/10.1177/2053168019856449)
-.
+Together with [Darrel Robinson](http://www.darrelrobinson.com/) we ran four list experiments in mainland China in 2017 in order to evaluate self-censorship on items commonly used in comparative politics to measure regime support. In short there is quite a lot of self-censorship going on, which help explain the comparatively high levels of reported regime support in China. The paper is published in [*Research & Politics*](https://journals.sagepub.com/doi/full/10.1177/2053168019856449).
 
 #### Abstract
 
@@ -24,7 +23,7 @@ The study of popular support for authoritarian regimes has long relied on the as
 
 #### Results and Figures
 
-![Direct and indirect meassures of regime support in China (figure 2 in paper)](/img/china.png)
+![Direct and indirect measures of regime support in China (figure 2 in paper)](/img/china.png)
 
 Considering confidence in the central government first, for the direct measure, 90.9% of respondents reported that they agreed with the statement: “I have confidence in the national government.” In contrast, according to the indirect, list method, only 66% of individuals reported agreement: a difference of 25 percentage points with a 95% confidence interval from 16 to 34 percentage points. For our second measure of specific support, 89.3% of our respondents agree that the government is doing its best to root out corruption with direct estimation. An estimated 63% of respondents agree with the direct statement, a 26.4 percentage point difference. The range of falsification for this item based on a 95% confidence interval is 19% to 34% of respondents.
 
