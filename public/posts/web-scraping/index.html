@@ -7,14 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/owl.carousel.css">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/owl.theme.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
 
 
-  <link href="https://tannenberg.github.io/css/style.sea.css" rel="stylesheet" id="theme-stylesheet">
+  <link href="/css/style.sea.css" rel="stylesheet" id="theme-stylesheet">
 
  
 
@@ -26,8 +26,8 @@
   
 
 
-<link href="https://tannenberg.github.io/css/custom.css" rel="stylesheet">
-<link rel="shortcut icon" href="https://tannenberg.github.io/img/favicon.png">
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png">
 
 
 </head>
@@ -37,7 +37,7 @@
           <div class="row row-offcanvas row-offcanvas-left">
               <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
   <div class="sidebar-content">
-    <h1 class="sidebar-heading"><a href="https://tannenberg.github.io/">MARCUS TANNENBERG</a></h1>
+    <h1 class="sidebar-heading"><a href="/">MARCUS TANNENBERG</a></h1>
     
       <p class="sidebar-p">I'm a PhD Candidate at the V-Dem Institute at the Department of Political Science, University of Gothenburg.</p>
     
@@ -45,13 +45,13 @@
     
     <ul class="sidebar-menu">
       
-        <li><a href="https://tannenberg.github.io/posts/">Home</a></li>
+        <li><a href="/posts/">Home</a></li>
       
-        <li><a href="https://tannenberg.github.io/publications/">Publications</a></li>
+        <li><a href="/publications/">Publications</a></li>
       
-        <li><a href="https://tannenberg.github.io/teaching/">Teaching</a></li>
+        <li><a href="/teaching/">Teaching</a></li>
       
-        <li><a href="https://tannenberg.github.io/about/">About</a></li>
+        <li><a href="/about/">About</a></li>
       
     </ul>
     <p class="social">
@@ -103,17 +103,14 @@
 <div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
   <div class="small-navbar visible-xs">
   <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
-  <h1 class="small-navbar-heading"><a href="https://tannenberg.github.io/">MARCUS TANNENBERG</a></h1>
+  <h1 class="small-navbar-heading"><a href="/">MARCUS TANNENBERG</a></h1>
 </div>
 
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
          <h1>Web Scraping Swedish Regents</h1>
-         
-
-
-<p>Inspired by this <a href="https://gist.github.com/acoppock">gist</a> from Alex Coppock which scrape and create a graph displaying the age and years of tenure of US presidents, I set out to do something similar for Swedish Regents. I had not seen a graph like this and think its a rather cool way of displaying data. Let’s call this an <em>age-tenure graph</em>. In addition to creating the graph it was a good opportunity to practice some simple web scarping, and using the <code>rvest</code> package. Here is the end product. I’m continuously amazed over the power and flexibility of R. With less than 40 lines of code I can scrape data, turn it into a tidy - easy to use - data set, and create a nice looking graph:</p>
+         <p>Inspired by this <a href="https://gist.github.com/acoppock">gist</a> from Alex Coppock which scrape and create a graph displaying the age and years of tenure of US presidents, I set out to do something similar for Swedish Regents. I had not seen a graph like this and think its a rather cool way of displaying data. Let’s call this an <em>age-tenure graph</em>. In addition to creating the graph it was a good opportunity to practice some simple web scarping, and using the <code>rvest</code> package. Here is the end product. I’m continuously amazed over the power and flexibility of R. With less than 40 lines of code I can scrape data, turn it into a tidy - easy to use - data set, and create a nice looking graph:</p>
 <p><img src="/posts/web-scraping_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>#webscraping livrustkammaren to create a age-tenure graph of Swedish regents
 library(rvest)
@@ -173,15 +170,15 @@ ggplot(df, aes(x = year, y = age, group = regent)) +
           </div>
       </div>
   </div>
-  <script src="https://tannenberg.github.io/js/jquery.min.js"></script>
-<script src="https://tannenberg.github.io/js/bootstrap.min.js"></script>
-<script src="https://tannenberg.github.io/js/jquery.cookie.js"> </script>
-<script src="https://tannenberg.github.io/js/ekko-lightbox.js"></script>
-<script src="https://tannenberg.github.io/js/jquery.scrollTo.min.js"></script>
-<script src="https://tannenberg.github.io/js/masonry.pkgd.min.js"></script>
-<script src="https://tannenberg.github.io/js/imagesloaded.pkgd.min.js"></script>
-<script src="https://tannenberg.github.io/js/owl.carousel.min.js"></script>
-<script src="https://tannenberg.github.io/js/front.js"></script>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
 
 </body>
 </html>

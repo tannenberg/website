@@ -2,77 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on MARCUS TANNENBERG</title>
-    <link>https://tannenberg.github.io/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on MARCUS TANNENBERG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; 2019 Marcus Tannenberg</copyright>
+    <lastBuildDate>Fri, 21 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tannenberg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Lyrical masterminds&#39; popularity on Spotify</title>
-      <link>https://tannenberg.github.io/posts/rappers/</link>
+      <title>Self-Censorship in Authoritarian States: Response bias in measures of popular support in China</title>
+      <link>/posts/china-lists/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tannenberg.github.io/posts/rappers/</guid>
-      <description>After seeing Matthew Daniels fantastic data viz on The Largest Vocabulary In Hip Hop, in which he calculates and compares the unique number of words in rappers’ first 35,000 lyrics I wanted to know how the lyrical masterminds compared in popularity. From eyeballing the data there seem to be a positive correlation between vocab size and my preference: Wutang, A Tribe Called Quest, De La Soul, Beastie Boys all have well above average estimated vocabularies.</description>
+      <guid>/posts/china-lists/</guid>
+      <description>Together with Darrel Robinson we ran four list experiments in mainland China in 2017 in order to evaluate self-censorship on items commonly used in comparative politics to measure regime support. In short there is quite a lot of self-censorship going on, which help explain the comparatively high levels of reported regime support in China. The paper is published in Research &amp;amp; Politics. .
+Abstract The study of popular support for authoritarian regimes has long relied on the assumption that respondents provide truthful answers to surveys.</description>
     </item>
     
     <item>
       <title>Web Scraping Swedish Regents</title>
-      <link>https://tannenberg.github.io/posts/web-scraping/</link>
+      <link>/posts/web-scraping/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tannenberg.github.io/posts/web-scraping/</guid>
+      <guid>/posts/web-scraping/</guid>
       <description>Inspired by this gist from Alex Coppock which scrape and create a graph displaying the age and years of tenure of US presidents, I set out to do something similar for Swedish Regents. I had not seen a graph like this and think its a rather cool way of displaying data. Let’s call this an age-tenure graph. In addition to creating the graph it was a good opportunity to practice some simple web scarping, and using the rvest package.</description>
     </item>
     
     <item>
       <title>Regime changes in 2017</title>
-      <link>https://tannenberg.github.io/posts/row-update/</link>
+      <link>/posts/row-update/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tannenberg.github.io/posts/row-update/</guid>
+      <guid>/posts/row-update/</guid>
       <description>The release of the Varieties of Democracy Dataset version 8 means that there is new data available for updating the Regimes of the World (RoW) measure for the year 2017, plus classifying the political regime of four additional countries added in the v.8 update. Indeed, the possibility of annual updates (in addition to transparency and local expertise) was one of the impetus for why we set out to create yet another categorical measure of political regimes, which is why I am particularly glad to see the first update of RoW since our article was published.</description>
     </item>
     
     <item>
-      <title>Regimes of the World (RoW)</title>
-      <link>https://tannenberg.github.io/posts/row/</link>
+      <title>Lyrical masterminds&#39; popularity on Spotify</title>
+      <link>/posts/rappers/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tannenberg.github.io/posts/row/</guid>
+      <guid>/posts/rappers/</guid>
+      <description>After seeing Matthew Daniels fantastic data viz on The Largest Vocabulary In Hip Hop, in which he calculates and compares the unique number of words in rappers’ first 35,000 lyrics I wanted to know how the lyrical masterminds compared in popularity. From eyeballing the data there seem to be a positive correlation between vocab size and my preference: Wutang, A Tribe Called Quest, De La Soul, Beastie Boys all have well above average estimated vocabularies.</description>
+    </item>
+    
+    <item>
+      <title>Regimes of the World (RoW)</title>
+      <link>/posts/row/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/row/</guid>
       <description>Together with Anna Lührmann and Staffan I. Lindberg, we leverage V-Dem’s excellent data to code any given country and year as either a Liberal Democracy , Electoral Democracy , Electoral Autocracy , or Closed Autocracies . The categorization is based on V-Dem indicators that are updated annually, and the The article describing our coding schema, and comparing RoW to extant data sets is freely available from open access journal Politics and Governance.</description>
     </item>
     
     <item>
-      <title>Self-Censorship in Authoritarian States: Response bias in measures of popular support in China</title>
-      <link>https://tannenberg.github.io/posts/china-lists/</link>
-      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://tannenberg.github.io/posts/china-lists/</guid>
-      <description>Together with Darrel Robinson we ran four list experiments in mainland China in 2017 in order to evaluate self-censorship on items commonly used in comparative politics to measure regime support. In short there is quite a lot of self-censorship going on, which help explain the comparatively high levels of reported regime support in China. The paper is now forthcoming in Research &amp;amp; Politics.
-Abstract The study of popular support for authoritarian regimes, and the comparative study of political attitudes, has long relied on the assumption that survey respondents provide truthful answers on surveys.</description>
-    </item>
-    
-    <item>
       <title>The Autocratic Trust Bias</title>
-      <link>https://tannenberg.github.io/posts/autocratic-trust/</link>
+      <link>/posts/autocratic-trust/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tannenberg.github.io/posts/autocratic-trust/</guid>
+      <guid>/posts/autocratic-trust/</guid>
       <description>PDF
 Abstract Because of a perceived risk of repressive action, some survey questions are likely sensitive in more autocratic countries while less so in more democratic countries. Yet survey data on potentially sensitive topics are frequently used in comparative research despite concerns about comparability. In a novel approach to examining the comparability of politically sensitive questions, I employ a multilevel analysis with more than 140,000 respondents in 36 African countries to test for systematic bias when survey respondents believe (fear) that the government, rather than an independent research institute, has commissioned the survey.</description>
     </item>
     
     <item>
       <title>Making Development Work</title>
-      <link>https://tannenberg.github.io/posts/eba.report/</link>
+      <link>/posts/eba.report/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tannenberg.github.io/posts/eba.report/</guid>
+      <guid>/posts/eba.report/</guid>
       <description>The Expert Group for Aid Studies (EBA) Report, 2015:07.
 PDF; Presentation at Rosenbad
 This report aims to summarize the results of research from the Quality of Government approach in terms of its importance for development and aid policy. Quality of Government (henceforth QoG) is understood as pertaining to the public institutions responsible for the implementation of public policies, i.e., the public administration and the judiciary. Qualitative as well as quantitative studies have shown that QoG factors, such as control of corruption, the rule of law, and administrative competence, have a strong positive impact on most standard measures of human well-being (e.</description>

@@ -2,12 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MARCUS TANNENBERG</title>
-    <link>https://tannenberg.github.io/publications/</link>
+    <link>/publications/</link>
     <description>Recent content on MARCUS TANNENBERG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2019 Marcus Tannenberg</copyright>
     
-	<atom:link href="https://tannenberg.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/publications/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

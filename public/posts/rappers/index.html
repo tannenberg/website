@@ -7,14 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/owl.carousel.css">
-<link rel="stylesheet" href="https://tannenberg.github.io/css/owl.theme.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
 
 
-  <link href="https://tannenberg.github.io/css/style.sea.css" rel="stylesheet" id="theme-stylesheet">
+  <link href="/css/style.sea.css" rel="stylesheet" id="theme-stylesheet">
 
  
 
@@ -26,8 +26,8 @@
   
 
 
-<link href="https://tannenberg.github.io/css/custom.css" rel="stylesheet">
-<link rel="shortcut icon" href="https://tannenberg.github.io/img/favicon.png">
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png">
 
 
 </head>
@@ -37,7 +37,7 @@
           <div class="row row-offcanvas row-offcanvas-left">
               <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
   <div class="sidebar-content">
-    <h1 class="sidebar-heading"><a href="https://tannenberg.github.io/">MARCUS TANNENBERG</a></h1>
+    <h1 class="sidebar-heading"><a href="/">MARCUS TANNENBERG</a></h1>
     
       <p class="sidebar-p">I'm a PhD Candidate at the V-Dem Institute at the Department of Political Science, University of Gothenburg.</p>
     
@@ -45,13 +45,13 @@
     
     <ul class="sidebar-menu">
       
-        <li><a href="https://tannenberg.github.io/posts/">Home</a></li>
+        <li><a href="/posts/">Home</a></li>
       
-        <li><a href="https://tannenberg.github.io/publications/">Publications</a></li>
+        <li><a href="/publications/">Publications</a></li>
       
-        <li><a href="https://tannenberg.github.io/teaching/">Teaching</a></li>
+        <li><a href="/teaching/">Teaching</a></li>
       
-        <li><a href="https://tannenberg.github.io/about/">About</a></li>
+        <li><a href="/about/">About</a></li>
       
     </ul>
     <p class="social">
@@ -103,17 +103,14 @@
 <div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
   <div class="small-navbar visible-xs">
   <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
-  <h1 class="small-navbar-heading"><a href="https://tannenberg.github.io/">MARCUS TANNENBERG</a></h1>
+  <h1 class="small-navbar-heading"><a href="/">MARCUS TANNENBERG</a></h1>
 </div>
 
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
          <h1>Lyrical masterminds&#39; popularity on Spotify</h1>
-         
-
-
-<p>After seeing Matthew Daniels fantastic data viz on <a href="https://pudding.cool/projects/vocabulary/">The Largest Vocabulary In Hip Hop</a>, in which he calculates and compares the unique number of words in rappers’ first 35,000 lyrics I wanted to know how the lyrical masterminds compared in popularity. From eyeballing the data there seem to be a positive correlation between vocab size and my preference: Wutang, A Tribe Called Quest, De La Soul, Beastie Boys all have well above average estimated vocabularies. But what is the relationship with rappers success on Spotify. To do this I use the Spotify API wrapper <a href="https://www.rcharlie.com/spotifyr/">spotifyr</a>, which allows you get artist’s entire discography in seconds, along with Spotify’s audio features and track/album popularity metrics. Matthew’s vocab estimates are available easily available at in a <a href="/Users/xtanma/website">google doc</a>. So how are the lyrical masterminds doing on Spotify? Not too too well, popular preferences are clearly negatively related to lyrical lagress. Below is the code for for interacting getting the data from Spotify and producing the graph.</p>
+         <p>After seeing Matthew Daniels fantastic data viz on <a href="https://pudding.cool/projects/vocabulary/">The Largest Vocabulary In Hip Hop</a>, in which he calculates and compares the unique number of words in rappers’ first 35,000 lyrics I wanted to know how the lyrical masterminds compared in popularity. From eyeballing the data there seem to be a positive correlation between vocab size and my preference: Wutang, A Tribe Called Quest, De La Soul, Beastie Boys all have well above average estimated vocabularies. But what is the relationship with rappers success on Spotify. To do this I use the Spotify API wrapper <a href="https://www.rcharlie.com/spotifyr/">spotifyr</a>, which allows you get artist’s entire discography in seconds, along with Spotify’s audio features and track/album popularity metrics. Matthew’s vocab estimates are available easily available at in a <a href="/Users/xtanma/website">google doc</a>. So how are the lyrical masterminds doing on Spotify? Not too too well, popular preferences are clearly negatively related to lyrical lagress. Below is the code for for interacting getting the data from Spotify and producing the graph.</p>
 <p><img src="/img/lyrical-masterminds.png" /></p>
 <pre class="r"><code>library(rio)
 library(tidyverse)
@@ -228,15 +225,15 @@ ggplot(df, aes(recalc, artist_popularity)) +
           </div>
       </div>
   </div>
-  <script src="https://tannenberg.github.io/js/jquery.min.js"></script>
-<script src="https://tannenberg.github.io/js/bootstrap.min.js"></script>
-<script src="https://tannenberg.github.io/js/jquery.cookie.js"> </script>
-<script src="https://tannenberg.github.io/js/ekko-lightbox.js"></script>
-<script src="https://tannenberg.github.io/js/jquery.scrollTo.min.js"></script>
-<script src="https://tannenberg.github.io/js/masonry.pkgd.min.js"></script>
-<script src="https://tannenberg.github.io/js/imagesloaded.pkgd.min.js"></script>
-<script src="https://tannenberg.github.io/js/owl.carousel.min.js"></script>
-<script src="https://tannenberg.github.io/js/front.js"></script>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
 
 </body>
 </html>
