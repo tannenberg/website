@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/rappers/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/web-scraping/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/row-update/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/row/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/china-lists/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/autocratic-trust/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/eba.report/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/posts/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/contact/</loc>
+    <lastmod>2016-11-06T13:00:25+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/teaching/</loc>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tannenberg.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

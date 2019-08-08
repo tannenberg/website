@@ -1,0 +1,24 @@
+---
+title: "About"
+output: html_document
+---
+
+<img src="static/img/photo_tannenberg.jpg" alt="Me" style="float:right;width:150px"/>
+
+### Hi, welcome to my website. I’m Marcus.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+***
+
+I'm a PhD Candidate at the [V-Dem Institute](https://www.v-dem.net/en/) at the Department of Political Science, University of Gothenburg. My research looks at self-censorship and the issues that it poses for measuring legitimacy and popular support in autocratic countries, as well as at the effects of autocratic development aid. I have also spent quite some time classifying political regimes.
+
+In addition to academic research I have worked on commissioned research for the Swedish Government's Expert Group for Aid Studies, and have together with [Darrel Robinson](http://www.darrelrobinson.com/) worked with the UNDP Oslo Governance Center to run survey experiments in order to help UNDP develop robust measures of a number of the Sustainable Development Goals.
+
+
+
+***

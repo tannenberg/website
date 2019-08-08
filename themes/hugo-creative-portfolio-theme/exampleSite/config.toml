@@ -1,5 +1,5 @@
-baseurl = "/"
-title = "MARCUS TANNENBERG"
+baseurl = "https://example.org/"
+title = "Creative portfolio"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
@@ -10,13 +10,13 @@ googleAnalytics = ""
 [params]
   # Style options: default (pink), blue, green, pink, red, sea, violet
   # Use custom.css for your custom styling
-  style = "sea"
-  description = "Tannenberg"
-  copyright = "&copy; 2019 Marcus Tannenberg"
+  style = "default"
+  description = "Describe your website"
+  copyright = "&copy;2016 Your name or company"
   sidebarAbout = [
-    "I'm a PhD Candidate at the V-Dem Institute at the Department of Political Science, University of Gothenburg.",
-    "I research self-censorship and the issues that it poses for measuring legitimacy and popular support in autocratic countries. I also work on the effects of autocratic development aid."
-    ]
+    "I am a creative illustrator and graphic designer with more than 10 years of experience.",
+    "Originally from Toronto, currently based in London."
+  ]
   # Contact page
      # Since this template is static, the contact form uses www.formspree.io as a
      # proxy. The form makes a POST request to their servers to send the actual
@@ -29,28 +29,29 @@ googleAnalytics = ""
      # - send a dummy email yourself to confirm your account
      # - click the confirm link in the email from www.formspree.io
      # - you're done. Happy mailing!
-  #email = "you@yoursite.com"
+  email = "you@yoursite.com"
 
   # Nav links in the side bar
   [[params.navlinks]]
   name = "Home"
-  url = "posts/"
+  url = "portfolio/"
   home = true
-
-  [[params.navlinks]]
-  name = "Publications"
-  url = "publications/"
-
-  [[params.navlinks]]
-  name = "Teaching"
-  url = "teaching/"
 
   [[params.navlinks]]
   name = "About"
   url = "about/"
 
+  [[params.navlinks]]
+  name = "Get in touch"
+  url = "contact/"
+
   [params.social]
-  email         = "marcus.tannenberg@gu.se"
-  twitter       = "//twitter.com/mtannenberg"
-  github        = "https://github.com/tannenberg"
-  googlescholar = "https://scholar.google.co.uk/citations?user=rmY22p8AAAAJ&hl=sv&oi=ao"
+  facebook      = "full page or profile url in facebook"
+  googleplus    = "full profile url in googleplus"
+  email         = "email@example.com"
+  twitter       = "full profile url in twitter"
+  linkedin      = "full profile url in linkedin"
+  stackoverflow = "full profile url in stackoverflow"
+  instagram     = "full profile url in instagram"
+  github        = "full profile url in github"
+  youtube       = "full profile url in youtube" 

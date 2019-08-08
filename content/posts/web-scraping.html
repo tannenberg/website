@@ -1,0 +1,68 @@
+---
+title: "Web Scraping Swedish Regents"
+author: "Marcus Tannenberg"
+date: '2018-12-21'
+categories: []
+tags: []
+type: "blog"
+showonlyimage: false
+weight: 1
+image: "img/swe-regents.png"
+description: "Trying out some web scraping to create an age-tenure graph of Swedish regents."
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+
+
+<p>Inspired by this <a href="https://gist.github.com/acoppock">gist</a> from Alex Coppock which scrape and create a graph displaying the age and years of tenure of US presidents, I set out to do something similar for Swedish Regents. I had not seen a graph like this and think its a rather cool way of displaying data. Let’s call this an <em>age-tenure graph</em>. In addition to creating the graph it was a good opportunity to practice some simple web scarping, and using the <code>rvest</code> package. Here is the end product. I’m continuously amazed over the power and flexibility of R. With less than 40 lines of code I can scrape data, turn it into a tidy - easy to use - data set, and create a nice looking graph:</p>
+<p><img src="/posts/web-scraping_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>#webscraping livrustkammaren to create a age-tenure graph of Swedish regents
+library(rvest)
+library(tidyverse)
+library(stringr)
+library(lubridate)
+library(ggrepel)
+library(stringr)
+
+# lets scrape data from regentlängden
+name &lt;- read_html(&quot;http://livrustkammaren.se/sv/utforska/regentlangden&quot;) %&gt;%
+  html_nodes(&quot;h3&quot;) %&gt;%
+  html_text() %&gt;%
+  str_sub(start = 3) %&gt;%
+  data.frame(regent = .)
+
+df &lt;- read_html(&quot;http://livrustkammaren.se/sv/utforska/regentlangden&quot;) %&gt;%
+  html_nodes(&quot;#node-349 p&quot;) %&gt;%
+  html_text() %&gt;%
+  gsub(&quot;[^0-9]&quot;, &quot;&quot;, .) %&gt;%
+  data.frame(years = .) %&gt;%
+  filter(years != &quot;&quot; &amp; years != &quot;23&quot;) %&gt;%
+  mutate(born = as.numeric(str_sub(years, end = 4)),
+         term_start = as.numeric(str_sub(years, start = 9,  end = 12)),
+         term_end = as.numeric(str_sub(years, start = 13,  end = 16)),
+         term_start = ifelse(is.na(term_start), 1973, term_start), #current king who by not having died ruins the pattern...
+         term_end = ifelse(is.na(term_end), year(today()), term_end),
+         regent_num = 1:length(term_start)) %&gt;%
+  dplyr::select(-years) %&gt;%
+  bind_cols(name) %&gt;%
+  gather(key, year, term_start, term_end) %&gt;%
+  mutate(age = year - born,
+         torch = if_else(key == &quot;term_start&quot;, regent_num, as.integer(regent_num + 1)))
+
+df_lab &lt;- df %&gt;% filter(key == &quot;term_start&quot;)
+
+ggplot(df, aes(x = year, y = age, group = regent)) +
+  geom_point(aes(color = age), size = 2) +
+  geom_line(aes(color = age), size = 1) +
+  geom_text_repel(data = df_lab, aes(label = regent), size = 3, nudge_y = -1, nudge_x = 10) +
+  geom_line(aes(group = torch), linetype = &quot;dotted&quot;, alpha = 0.5) +
+  scale_color_viridis_c(begin = .5) +
+  theme_bw() +
+  ylab(&quot;Age&quot;)+
+  xlab(&quot;Year&quot;) +
+  theme(legend.position = &quot;none&quot;) +
+  labs(title = &quot;How old was the Regent of Sweden?&quot;,
+       subtitle = &quot;Code at: https://gist.github.com/tannenberg&quot;,
+       caption = &quot;Source: livrustkammaren.se&quot;)</code></pre>

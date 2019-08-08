@@ -1,0 +1,127 @@
+---
+title: "Lyrical masterminds' popularity on Spotify"
+author: "Marcus Tannenberg"
+date: '2018-12-21'
+categories: []
+tags: []
+type: "blog"
+showonlyimage: false
+weight: 1
+image: "img/lyrical-masterminds.png"
+description: "Size of rappers' vocabulary and success on Spotify. Follow up on @matthew_daniels rappers' vocabulary estimates: how are the lyrical masterminds doing on Spotify?"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+After seeing Matthew Daniels fantastic data viz on [The Largest Vocabulary In Hip Hop](https://pudding.cool/projects/vocabulary/), in which he calculates and compares the unique number of words in rappers' first 35,000 lyrics I wanted to know how the lyrical masterminds compared in popularity. From eyeballing the data there seem to be a positive correlation between vocab size and my preference: Wutang, A Tribe Called Quest, De La Soul, Beastie Boys all have well above average estimated vocabularies. But what is the relationship with rappers success on Spotify. To do this I use the Spotify API wrapper [spotifyr](https://www.rcharlie.com/spotifyr/), which allows you get artist's entire discography in seconds, along with Spotify’s audio features and track/album popularity metrics. Matthew's vocab estimates are available easily available at in a [google doc](/Users/xtanma/website). So how are the lyrical masterminds doing on Spotify? Not too too well, popular preferences are clearly negatively related to lyrical lagress. Below is the code for for interacting getting the data from Spotify and producing the graph. 
+
+![](/img/lyrical-masterminds.png)
+
+```{r, eval=FALSE}
+library(rio)
+library(tidyverse)
+library(spotifyr)
+library(fuzzyjoin)
+library(ggrepel)
+
+#lets get the rapper's vocabulary count data
+rappers <- import("https://docs.google.com/spreadsheets/d/1HIIfgDpNMM-j0hoQHN-yP5P1lNOfJuvym0u0sdWwD9g/edit#gid=737896402") %>%
+  filter(!is.na(recalc)) %>% #rm those that we don't have word count data for
+  as_tibble() %>%
+  mutate(rapper_clean = recode(rapper_clean, "BoB" = "B.o.B", # or we'll get Bob Marley from spotify
+                               "Big KRIT" = "Big K.R.I.T.",
+                               "Brockhampton"  = "BROCKHAMPTON",
+                               "Del the Funky Homosapian" = "Del the Funky Homosapien",
+                               "Jay-Z" = "JAY Z",
+                               "KAAN" = "K.A.A.N.",
+                               "Missy Elliot" = "Missy Elliott",
+                               "Puff Daddy" = "Diddy",
+                               "Young Jeezy" = "Jeezy"
+                               ))
+
+#cool lets see what data we can get from Spotify, first we need to set up a developer
+#id to get access to the API see https://www.rcharlie.com/spotifyr/ for guide
+
+Sys.setenv(SPOTIFY_CLIENT_ID = 'insert_your_client_id_here')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = 'insert_your_client_secret_here')
+
+access_token <- spotifyr::get_spotify_access_token(client_id = Sys.getenv("SPOTIFY_CLIENT_ID"),
+                                                   client_secret = Sys.getenv("SPOTIFY_CLIENT_SECRET"))
+
+# lets get a vector with the rapper names
+artists <- rappers$rapper_clean
+
+# ok lets write a loop that fetches the data for all rappers in artists
+df <- NULL
+
+for (i in 1:length(artists)) {
+  tryCatch({
+    m <-  spotifyr::get_artists(artists[i], return_closest_artist = TRUE)
+    df <- rbind(df, data.frame(m))
+  }, error=function(e){})
+}
+
+# "Murs" need special attention or we get "Olly Murs", and we don't want that!
+df <- spotifyr::get_artists("Murs") %>%
+  filter(artist_name=="Murs") %>%
+  rbind(df)
+
+# same goes for Rakim or we'll get RKM & Ken-Y
+df <- spotifyr::get_artists("Rakim") %>%
+  filter(artist_name=="Rakim") %>%
+  rbind(df)
+
+# lets join with fuzzy join's string dist, because there are so many ways to spell these names...
+df <- rappers %>%
+  fuzzyjoin::stringdist_left_join(df, by = c("rapper_clean"="artist_name")) %>%
+  select(rapper, rapper_clean, artist_name, era, words, recalc, artist_popularity, artist_num_followers)
+
+#cool but we have ten too many, i.e. there are duplicates introduced
+df %>% filter(duplicated(rapper_clean)) %>% select(rapper_clean, artist_name)
+
+# ironically these all would have worked perfectly with a normal left_join()
+# lets remove these, filter out those that are incorrect and merge back again
+df_duplicates <- df %>%
+  filter(rapper_clean == "GZA" | rapper_clean == "Murs" | rapper_clean == "Nas" |
+           rapper_clean == "NF" | rapper_clean == "Russ" | rapper_clean == "RZA" |
+           rapper_clean == "YG" | rapper_clean == "UGK") %>%
+  filter(rapper_clean == artist_name)
+
+df <- df %>%
+  filter(!(rapper_clean == "GZA" | rapper_clean == "Murs" | rapper_clean == "Nas" |
+           rapper_clean == "NF" | rapper_clean == "Russ" | rapper_clean == "RZA" |
+           rapper_clean == "YG" | rapper_clean == "UGK")) %>%
+  rbind(df_duplicates)
+
+# perhaps not so smooth but at least its right
+cols <- viridis::viridis(1, begin = .9)
+
+label_these <- c("Wu-Tang Clan","Kendrick Lamar", "Jedi Mind Tricks", "Immortal Technique", "Eminem",
+                 "2Pac", "Nas", "Beastie Boys", "Busdriver", "Aesop Rock", "Kanye West", "Run-D.M.C.",
+                 "NF", "Diddy", "Childish Gambino", "Snoop Dogg", "Mos Def",
+                 "GZA", "A Tribe Called Quest", "Wiz Khalifa", "A$AP Rocky", "Common", "Cypress Hill", "DMX", "Ice T",
+                 "Killah Priest", "Kool G Rap", "KRS-One", "Lil Uzi Vert",  "Method Man", "MF DOOM",
+                 "Outkast", "Travis Scott", "Too Short", "K-Rino", "Ice Cube", "Canibus", "Lil Wayne",
+                 "Rakim", "Missy Elliott", "The Roots", "21 Savage", "Busta Rhymes", "J Cole", "Logic")
+
+df <- df %>%
+  mutate(high_light = ifelse(rapper_clean == "Drake", "Drake is the most popular artist on Spotify",
+                             ifelse(rapper_clean %in% label_these, rapper_clean, "")))
+
+ggplot(df, aes(recalc, artist_popularity)) +
+  geom_smooth(size = 1.3, color = cols, se = FALSE, linetype = 2, method = "lm") +
+  geom_point(aes(color = era), size = 4) +
+  theme_classic(base_size = 14) +
+  scale_color_viridis_d(end = .8) +
+  ylab("Popularity on Spotify") +
+  xlab("Lyrical largesse") +
+  labs(title = "How are the lyrical masterminds doing on Spotify?",
+       subtitle = "Code at: https://gist.github.com/tannenberg",
+       caption = "Source: Vocabulary size from @matthew_daniels; popularity from Spotify's API") +
+  guides(color=guide_legend(title="Era")) +
+  geom_text_repel(aes(label = high_light), size = 4,  nudge_y = 1.5, nudge_x = 17) +
+  NULL
+
+```
+

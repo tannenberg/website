@@ -1,0 +1,22 @@
+---
+title: "The Autocratic Trust Bias"
+author: "Marcus Tannenberg"
+date: '2018-12-21'
+categories: []
+tags: []
+type: "blog"
+showonlyimage: false
+weight: 4
+image: "img/ab-bias.png"
+description: "Because of a perceived risk of repressive action, some survey questions are likely sensitive in more autocratic countries while less so in more democratic countries. This paper shows that to be the case across 36 African countries"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+
+[**PDF**](http://afrobarometer.org/sites/default/files/publications/Working%20papers/afropaperno176_autocratic_trust_bias.pdf)
+
+#### Abstract
+
+Because of a perceived risk of repressive action, some survey questions are likely sensitive in more autocratic countries while less so in more democratic countries. Yet survey data on potentially sensitive topics are frequently used in comparative research despite concerns about comparability. In a novel approach to examining the comparability of politically sensitive questions, I employ a multilevel analysis with more than 140,000 respondents in 36 African countries to test for systematic bias when survey respondents believe (fear) that the government, rather than an independent research institute, has commissioned the survey. The findings indicate that fear of the government induces a substantial and significant bias on questions regarding the citizen-state relationship in more autocratic countries, but not in more democratic countries. Moreover, respondents who think the government commissioned the survey do not answer differently on innocuous, apolitical questions than respondents who believe the survey to be independent, regardless of regime type. This has practical implications for the comparative use of survey data. 

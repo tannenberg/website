@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Web Scraping Swedish Regents</title>
+<meta name="description" content="Tannenberg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://tannenberg.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://tannenberg.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://tannenberg.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://tannenberg.github.io/css/owl.theme.css">
+
+
+  <link href="https://tannenberg.github.io/css/style.sea.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://tannenberg.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://tannenberg.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://tannenberg.github.io/">MARCUS TANNENBERG</a></h1>
+    
+      <p class="sidebar-p">I'm a PhD Candidate at the V-Dem Institute at the Department of Political Science, University of Gothenburg.</p>
+    
+      <p class="sidebar-p">I research self-censorship and the issues that it poses for measuring legitimacy and popular support in autocratic countries. I also work on the effects of autocratic development aid.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://tannenberg.github.io/posts/">Home</a></li>
+      
+        <li><a href="https://tannenberg.github.io/publications/">Publications</a></li>
+      
+        <li><a href="https://tannenberg.github.io/teaching/">Teaching</a></li>
+      
+        <li><a href="https://tannenberg.github.io/about/">About</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  <a href="mailto:marcus.tannenberg@gu.se" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="//twitter.com/mtannenberg" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/tannenberg" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+  
+  <a href="https://scholar.google.co.uk/citations?user=rmY22p8AAAAJ&amp;hl=sv&amp;oi=ao" data-animate-hover="pulse" class="external">
+    <i class="ai ai-google-scholar"></i>
+  </a>
+
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy; 2019 Marcus Tannenberg
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://tannenberg.github.io/">MARCUS TANNENBERG</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Web Scraping Swedish Regents</h1>
+         
+
+
+<p>Inspired by this <a href="https://gist.github.com/acoppock">gist</a> from Alex Coppock which scrape and create a graph displaying the age and years of tenure of US presidents, I set out to do something similar for Swedish Regents. I had not seen a graph like this and think its a rather cool way of displaying data. Let’s call this an <em>age-tenure graph</em>. In addition to creating the graph it was a good opportunity to practice some simple web scarping, and using the <code>rvest</code> package. Here is the end product. I’m continuously amazed over the power and flexibility of R. With less than 40 lines of code I can scrape data, turn it into a tidy - easy to use - data set, and create a nice looking graph:</p>
+<p><img src="/posts/web-scraping_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>#webscraping livrustkammaren to create a age-tenure graph of Swedish regents
+library(rvest)
+library(tidyverse)
+library(stringr)
+library(lubridate)
+library(ggrepel)
+library(stringr)
+
+# lets scrape data from regentlängden
+name &lt;- read_html(&quot;http://livrustkammaren.se/sv/utforska/regentlangden&quot;) %&gt;%
+  html_nodes(&quot;h3&quot;) %&gt;%
+  html_text() %&gt;%
+  str_sub(start = 3) %&gt;%
+  data.frame(regent = .)
+
+df &lt;- read_html(&quot;http://livrustkammaren.se/sv/utforska/regentlangden&quot;) %&gt;%
+  html_nodes(&quot;#node-349 p&quot;) %&gt;%
+  html_text() %&gt;%
+  gsub(&quot;[^0-9]&quot;, &quot;&quot;, .) %&gt;%
+  data.frame(years = .) %&gt;%
+  filter(years != &quot;&quot; &amp; years != &quot;23&quot;) %&gt;%
+  mutate(born = as.numeric(str_sub(years, end = 4)),
+         term_start = as.numeric(str_sub(years, start = 9,  end = 12)),
+         term_end = as.numeric(str_sub(years, start = 13,  end = 16)),
+         term_start = ifelse(is.na(term_start), 1973, term_start), #current king who by not having died ruins the pattern...
+         term_end = ifelse(is.na(term_end), year(today()), term_end),
+         regent_num = 1:length(term_start)) %&gt;%
+  dplyr::select(-years) %&gt;%
+  bind_cols(name) %&gt;%
+  gather(key, year, term_start, term_end) %&gt;%
+  mutate(age = year - born,
+         torch = if_else(key == &quot;term_start&quot;, regent_num, as.integer(regent_num + 1)))
+
+df_lab &lt;- df %&gt;% filter(key == &quot;term_start&quot;)
+
+ggplot(df, aes(x = year, y = age, group = regent)) +
+  geom_point(aes(color = age), size = 2) +
+  geom_line(aes(color = age), size = 1) +
+  geom_text_repel(data = df_lab, aes(label = regent), size = 3, nudge_y = -1, nudge_x = 10) +
+  geom_line(aes(group = torch), linetype = &quot;dotted&quot;, alpha = 0.5) +
+  scale_color_viridis_c(begin = .5) +
+  theme_bw() +
+  ylab(&quot;Age&quot;)+
+  xlab(&quot;Year&quot;) +
+  theme(legend.position = &quot;none&quot;) +
+  labs(title = &quot;How old was the Regent of Sweden?&quot;,
+       subtitle = &quot;Code at: https://gist.github.com/tannenberg&quot;,
+       caption = &quot;Source: livrustkammaren.se&quot;)</code></pre>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://tannenberg.github.io/js/jquery.min.js"></script>
+<script src="https://tannenberg.github.io/js/bootstrap.min.js"></script>
+<script src="https://tannenberg.github.io/js/jquery.cookie.js"> </script>
+<script src="https://tannenberg.github.io/js/ekko-lightbox.js"></script>
+<script src="https://tannenberg.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://tannenberg.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://tannenberg.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://tannenberg.github.io/js/owl.carousel.min.js"></script>
+<script src="https://tannenberg.github.io/js/front.js"></script>
+
+</body>
+</html>
