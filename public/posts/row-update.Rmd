@@ -12,6 +12,7 @@ description: "Which countries saw regime changes in 2017? The V-Dem v.8 update o
 output:
   blogdown::html_page:
     toc: false
+draft: true
 ---
 
 

@@ -6,20 +6,32 @@ categories: []
 tags: []
 type: "blog"
 showonlyimage: false
-weight: 3
-image: "img/code-tree.png"
+weight: 2
+image: "img/row_map.png"
 description: "In this article we introduce a new regime classification for almost all countries from 1900 up until today based on V-Dem data"
 output:
   blogdown::html_page:
     toc: false
 ---
 
-Together with [Anna Lührmann](https://sites.google.com/view/anna-luehrmann/) and Staffan I. Lindberg, we leverage V-Dem's excellent data to code any given country and year as either a <span style="color:#5e3c99"> **Liberal Democracy** </span>,  <span style="color:#b2abd2"> **Electoral Democracy** </span>, <span style="color:#fdb863"> **Electoral Autocracy** </span>, or <span style="color:#e66101"> **Closed Autocracies** </span>. The categorization is based on V-Dem indicators that are updated annually, and the  The article describing our coding schema, and comparing RoW to extant data sets is freely available from open access journal [Politics and Governance](https://www.cogitatiopress.com/politicsandgovernance/index). I also put together a [ShinyApp](https://tannenberg.shinyapps.io/regimes-of-the-world/) which vizualizes the regime type's across the world for any given year. Below follows the abstract and a quick walkthrough of the main contributions of the RoW measure. 
+Together with [Anna Lührmann](https://sites.google.com/view/anna-luehrmann/) and [Staffan I. Lindberg](), we leverage V-Dem's excellent data to code any given country and year as either a <span style="color:#5e3c99"> **Liberal Democracy** </span>,  <span style="color:#b2abd2"> **Electoral Democracy** </span>, <span style="color:#fdb863"> **Electoral Autocracy** </span>, or <span style="color:#e66101"> **Closed Autocracies** </span>. The categorization is based on V-Dem indicators that are updated annually, and the  The article describing our coding schema, and comparing RoW to extant data sets is freely available from open access journal [Politics and Governance](https://www.cogitatiopress.com/politicsandgovernance/index). I also put together a [ShinyApp](https://tannenberg.shinyapps.io/regimes-of-the-world/) which vizualizes the regime type's across the world for any given year. Below follows the abstract and a quick walkthrough of the main contributions of the RoW measure. You can read the paper [here](https://www.cogitatiopress.com/politicsandgovernance/article/download/1214/1214).
 
-![Regimes of the World in 2018](/img/row_map.png)
 
 ### Abstract
 
 Classifying political regimes has never been more difficult. Most contemporary regimes hold de-jure multiparty elections with universal suffrage. In some countries, elections ensure that political rulers are—at least somewhat—accountable to the electorate whereas in others they are a mere window dressing exercise for authoritarian politics. Hence, regime types need to be distinguished based on the de-facto implementation of democratic institutions and processes. Using V-Dem data, we propose with Regimes of the World (RoW) such an operationalization of four important regime types—closed and electoral autocracies; electoral and liberal democracies—with vast coverage (almost all countries from 1900 to 2016). We also contribute a solution to a fundamental weakness of extant typologies: The unknown extent of misclassification due to uncertainty from measurement error. V-Dem’s measures of uncertainty (Bayesian highest posterior densities) allow us to be the first to provide a regime typology that distinguishes cases classified with a high degree of certainty from those with “upper” and “lower” bounds in each category. Finally, a comparison of disagreements with extant datasets (7%–12% of the country-years), demonstrates that the RoW classification is more conservative, classifying regimes with electoral manipulation and infringements of the political freedoms more frequently as electoral autocracies, suggesting that it better captures the opaqueness of contemporary autocracies.
 
-- [PDF](https://www.cogitatiopress.com/politicsandgovernance/article/download/1214/1214)
+### Figures
+
+![Coding schema for the RoW typologies](/img/code-tree.png)
+
+![Regimes of the World (RoW) 1900–2018](row_stacked_graph_new_legend.png)
+
+![Regimes of the World in 2018 (updated)](/img/row_map.png)
+
+![Visual comparison of other measures to RoW. Each panel is limited to the time period and cases of the
+dataset with least coverage](/img/row_fig5.png)
+
+
+
+
