@@ -14,7 +14,7 @@ output:
     toc: false
 ---
 
-I joined [Staffan Lindberg]() to edit an issue of *APSA's Annals of Comparative Democratization* focused on development aid from autocratic donors. With contributions from (Sarah Blodgett Bermeo)[https://www.sarahbermeo.com/], (Christine Hackenesh)[https://www.die-gdi.de/en/christine-hackenesch/], (Julia Bader)[https://www.uva.nl/profiel/b/a/j.bader2/j.bader2.html], (Brad Parks)[https://www.aiddata.org/people/brad-parks] and (Austin Strange)[https://www.austinstrange.org/about] we put together what I think is a great issue taking stock of what we know about autocratic aid and democratization. Read it [*here*](https://gallery.mailchimp.com/195d6bf7bad75a3ef81189778/files/96ee2113-2c81-44e2-905d-6c7309e7e3e7/APSA_June2019.pdf). You also find my contribution below. 
+I joined [Staffan Lindberg]() to edit an issue of *APSA's Annals of Comparative Democratization* focused on development aid from autocratic donors. With contributions from [Sarah Blodgett Bermeo](https://www.sarahbermeo.com/), [Christine Hackenesh](https://www.die-gdi.de/en/christine-hackenesch/), [Julia Bader](https://www.uva.nl/profiel/b/a/j.bader2/j.bader2.html), [Brad Parks](https://www.aiddata.org/people/brad-parks) and [Austin Strange](https://www.austinstrange.org/about) we put together what I think is a great issue taking stock of what we know about autocratic aid and democratization. Read it [*here*](https://gallery.mailchimp.com/195d6bf7bad75a3ef81189778/files/96ee2113-2c81-44e2-905d-6c7309e7e3e7/APSA_June2019.pdf). You also find my contribution below. 
 
 #### My Issue Editor's Note
 
@@ -63,9 +63,4 @@ Second, recipients in democratic regimes typically have access to a freer media 
 To further investigate the effects on democratic attitudes we need to dig deeper into the potential treatment heterogeneity of different projects. An Algerian, for example, signals that all Chinese projects unlikely have the same effect:  "We have to start with the first step and get a job for unemployed local youth. A factory would have been a better present.”  It is reasonable to assume that hospitals and schools are received and perceived differently from roads and hydropower projects typically associated with long-term construction and environmental impact, and from projects that mostly benefit a narrow elite, such as an opera house. 
 Another issue associated with geo-referenced data is the assignment of treatment. The appropriate cut-off distance is inevitably arbitrary and present a clear trade-off: Too short distances lead to a small sample of individuals linked to project sites, but too long distances includes potentially untreated individuals into the treatment group. Moreover, to the best of my knowledge all previous research has used a radius based on Euclidian distance, i.e. as the crow flies, to determine treatment and control status. This is probably a decent proxy in many cases, but geographical features such as mountains, rivers, and forests may prove difficult obstacles in the pursuit to travel in straight lines. A treatment caption area based on the estimated transport time over land, accounting for geographical obstacles as well as conveniences such as roads would be a better measure. Given increasing access to georeferenced data, I believe that we have much to gain from incorporating methodological techniques from geography and the earth sciences to advance our analyses in this regard. 
 
-
-
-
-
-#### Results and Figures
 
