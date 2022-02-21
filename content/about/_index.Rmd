@@ -18,9 +18,11 @@ output: html_document
 
 I'm a PhD Candidate at the [V-Dem Institute](https://www.v-dem.net/en/) at the Department of Political Science, University of Gothenburg. My research looks at self-censorship and the issues that it poses for measuring legitimacy and popular support in autocratic countries, as well as at the effects of autocratic development aid. I have also spent quite some time classifying political regimes.
 
-In addition to academic research I have worked on commissioned research for the Swedish Government's Expert Group for Aid Studies, and have together with [Darrel Robinson](http://www.darrelrobinson.com/) worked with the UNDP Oslo Governance Center to run survey experiments in order to help UNDP develop robust measures of a number of the Sustainable Development Goals.
+In addition to academic research I have worked on commissioned research for the Swedish Government's Expert Group for Aid Studies, and have together with [Darrel Robinson](http://www.darrelrobinson.com/) worked with the UNDP Oslo Governance Center to run survey experiments in order to help UNDP develop robust measures of a number of the Sustainable Development Goals. 
 
-I'll be a Visiting Graduate Student at UCSD for the fall semester of 2019. 
+I love data visualization and on top of personal projects I have created a interactive map which is part of the the Museum of World Culture's permanent exhibition on democracy around the world, and have also worked with SIDA to develop an online application to graph V-Party data. 
+
+I am currently awaiting internal review of my dissertation and am looking for opportunities in the Gothenburg area or remotely. 
 
 
 ***

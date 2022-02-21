@@ -14,7 +14,7 @@ output:
     toc: false
 ---
 
-Together with [Anna Lührmann](https://sites.google.com/view/anna-luehrmann/) and [Staffan I. Lindberg](), we leverage V-Dem's excellent data to code any given country and year as either a <span style="color:#5e3c99"> **Liberal Democracy** </span>,  <span style="color:#b2abd2"> **Electoral Democracy** </span>, <span style="color:#fdb863"> **Electoral Autocracy** </span>, or <span style="color:#e66101"> **Closed Autocracies** </span>. The categorization is based on V-Dem indicators that are updated annually, and the  The article describing our coding schema, and comparing RoW to extant data sets is freely available from open access journal [Politics and Governance](https://www.cogitatiopress.com/politicsandgovernance/index). I also put together a [ShinyApp](https://tannenberg.shinyapps.io/regimes-of-the-world/) which vizualizes the regime type's across the world for any given year. Below follows the abstract and a quick walkthrough of the main contributions of the RoW measure. You can read the paper [here](https://www.cogitatiopress.com/politicsandgovernance/article/download/1214/1214).
+Together with [Anna Lührmann]() and [Staffan I. Lindberg](), we leverage V-Dem's excellent data to code any given country and year as either a <span style="color:#5e3c99"> **Liberal Democracy** </span>,  <span style="color:#b2abd2"> **Electoral Democracy** </span>, <span style="color:#fdb863"> **Electoral Autocracy** </span>, or <span style="color:#e66101"> **Closed Autocracies** </span>. The categorization is based on V-Dem indicators that are updated annually, and the  The article describing our coding schema, and comparing RoW to extant data sets is freely available from open access journal [Politics and Governance](https://www.cogitatiopress.com/politicsandgovernance/index). I also put together a [ShinyApp](https://tannenberg.shinyapps.io/regimes-of-the-world/) which vizualizes the regime type's across the world for any given year. Below follows the abstract and a quick walkthrough of the main contributions of the RoW measure. You can read the paper [here](https://www.cogitatiopress.com/politicsandgovernance/article/download/1214/1214).
 
 
 ### Abstract
@@ -25,7 +25,7 @@ Classifying political regimes has never been more difficult. Most contemporary r
 
 ![Coding schema for the RoW typologies](/img/code-tree.png)
 
-![Regimes of the World (RoW) 1900–2018](row_stacked_graph_new_legend.png)
+![Regimes of the World (RoW) 1900–2018](/img/row_stacked_graph_new_legend.png)
 
 ![Regimes of the World in 2018 (updated)](/img/row_map.png)
 

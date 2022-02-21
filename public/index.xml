@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Marcus Tannenberg</copyright>
-    <lastBuildDate>Sun, 30 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dealing with measurement error in list experiments: Choosing the right control list design</title>
+      <link>/posts/reducing-error/</link>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/reducing-error/</guid>
+      <description>Open-access at Research &amp;amp; Politics
+Abstract List experiments are widely used in the social sciences to elicit truthful responses to sensitive questions. Yet, the research design commonly suffers from the problem of measurement error in the form of non-strategic respondent error, where some inattentive participants might provide random responses. This type of error can result in severely biased estimates. A recently proposed solution is the use of a necessarily false placebo item to equalize the length of the treatment and control lists in order to alleviate concerns about respondent error.</description>
+    </item>
     
     <item>
       <title>Development aid from dictators: Damaging for democracy?</title>

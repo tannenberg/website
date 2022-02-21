@@ -6,7 +6,7 @@ output: html_document
 
 ### Teaching
 
-I currently teach the course **Democracy and Democratization in a Comparative Perspective (SK1214)** at the political science department at the University of Gothenburg. I plan and coordinate the course together w. Anna Person, hold a couple of lectures and run several seminars throughout the semester. This course taught in Swedish and is offered twice a year. Below you'll find my lecture slides from the most recent semester: 
+I have taught the course **Democracy and Democratization in a Comparative Perspective (SK1214)** at the department of political science at the University of Gothenburg. I plan and coordinate the course together w. Anna Person, hold a couple of lectures and run several seminars throughout the semester. This course taught in Swedish and is offered twice a year. Below you'll find my lecture slides from the most recent semester: 
 
 - Autocratic systems - [slides](https://tannenberg.github.io/autocratic-regimes/)
 - Aid and democratization [slides](http://tannenberg.github.io/aid-lecture/)
